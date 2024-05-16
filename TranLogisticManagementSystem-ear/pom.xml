@@ -7,7 +7,9 @@
         <version>1.0</version>
     </parent>
     <artifactId>TranLogisticManagementSystem-ear</artifactId>
-    <name>Archetype - TranLogisticManagementSystem-ear</name>
+    <name>TranLogisticManagementSystem-ear</name>
+    <version>1.0</version>
+    <packaging>war</packaging>
     <url>http://maven.apache.org</url>
 
     <properties>

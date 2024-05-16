@@ -8,7 +8,7 @@
     </parent>
     <artifactId>TranLogisticManagementSystem-web</artifactId>
     <packaging>war</packaging>
-    <name>TranLogisticManagementSystem-web Maven Webapp</name>
+    <name>TranLogisticManagementSystem-web</name>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
