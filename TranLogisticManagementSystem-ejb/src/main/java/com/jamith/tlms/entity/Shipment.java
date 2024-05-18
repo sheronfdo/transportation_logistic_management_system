@@ -22,7 +22,7 @@ public class Shipment {
     @Column(name = "vehicle", length = 45)
     private String vehicle;
 
-    @Column(name = "date", length = 100)
+    @Column(name = "date")
     private Date date;
 
     @Column(name = "status", length = 45)

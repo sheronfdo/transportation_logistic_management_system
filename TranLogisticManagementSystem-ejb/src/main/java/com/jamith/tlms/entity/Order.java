@@ -16,7 +16,7 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "date", length = 100)
+    @Column(name = "date")
     private Date date;
 
     @Column(name = "user", length = 45)
