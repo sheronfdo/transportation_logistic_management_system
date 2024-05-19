@@ -53,4 +53,17 @@ public class InventoryServiceBean implements InventoryService {
         getItemsResponse.setInventoryList(query);
         return getItemsResponse;
     }
+
+    @Override
+    public GetItemsResponse getSingleItem(GetItemsRequest getItemsRequest) {
+        ModelMapper modelMapper = new ModelMapper();
+        Inventory item = em.createQuery("SELECT i FROM Inventory i WHERE i.status=:status and i.id=:id", Inventory.class)
+                .setParameter("status", Status.active.name())
+                .setParameter("id", getItemsRequest.getItemId())
+                .getSingleResult();
+
+        GetItemsResponse getItemsResponse = new GetItemsResponse();
+        getItemsResponse.setInventoryItem(modelMapper.map(item, InventoryItem.class));
+        return getItemsResponse;
+    }
 }

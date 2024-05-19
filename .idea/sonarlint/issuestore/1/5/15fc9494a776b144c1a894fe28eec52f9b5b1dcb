@@ -1,0 +1,10 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ı8İ¼»Šù1J$013adb73-ed8e-4ef6-9b84-3e40efcbaddc
+ 
+java:S1128"XRemove this unused import 'com.jamith.tlms.dto.response.inventoryService.InventoryItem'.(àÔºÙıÿÿÿÿ8Àå“ù1J$d8b75841-9963-4976-98b6-b375bbe53352
+€
+java:S1128"8Remove this unused import 'org.modelmapper.ModelMapper'.(ó¿Ôúÿÿÿÿ8Áå“ù1J$81850565-09c6-47a7-90fb-e133c51eea7d
+s
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Âå“ù1J$f6a9410c-d9d6-4a8a-a2af-256908c9d9d6
+€
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8Äå“ù1J$db3e8e8a-f0f1-4a49-8edb-0ecf9e9e7c95

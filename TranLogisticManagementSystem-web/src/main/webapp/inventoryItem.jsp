@@ -30,8 +30,7 @@
             <td>${item.stockQty}</td>
             <td>${item.price}</td>
             <td>
-                <a href="edit?id=${item.id}">Edit</a>
-                <a href="delete?id=${item.id}" onclick="return confirm('Are you sure?')">Delete</a>
+                <a href="order?itemId=${item.id}" onclick="return confirm('Are you sure?')">Order</a>
             </td>
         </tr>
     </c:forEach>

@@ -10,5 +10,6 @@
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
         </properties>
+        <shared-cache-mode>NONE</shared-cache-mode>
     </persistence-unit>
 </persistence>

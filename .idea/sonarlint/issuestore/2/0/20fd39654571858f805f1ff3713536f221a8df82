@@ -1,0 +1,9 @@
+
+‰Web:DoctypePresenceCheck	":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷ÃûÿÿÿÿJ$76abe67d-641a-4342-b7e1-00a39c8ae6d8
+€	Web:S5254	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷ÃûÿÿÿÿJ$aed7e911-ff75-47c1-8fbc-2814a6b8b5a2
+€	Web:S6825"9aria-hidden="true" must not be set on focusable elements.(°ĞŸ½øÿÿÿÿ8“Á×Œù1J$1df66b6a-e785-43ef-bf5e-992252ea53fe
+zWeb:TableWithoutCaptionCheck" Add a description to this table.(¿‰˜ÿÿÿÿÿ8»«ÁŒù1J$bcda24e5-6072-41d5-8327-9f0f654c5f7e
+™ Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(„âÆ˜ıÿÿÿÿ8½«ÁŒù1J$1404cefe-f08a-4541-a68c-079901c351c4
+” Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(¼ıí¬8¿«ÁŒù1J$ee822444-948c-4076-b97f-02d3f2825a97
+” Web:TableHeaderHasIdOrScopeCheck!";Add either an 'id' or a 'scope' attribute to this <th> tag.(æñ˜“8À«ÁŒù1J$8e5f40db-3e0b-44c8-b253-d2e6a5e2a08b
+™ Web:TableHeaderHasIdOrScopeCheck'";Add either an 'id' or a 'scope' attribute to this <th> tag.(­Ë–øúÿÿÿÿ8–ëàŒù1J$c9d56449-2a49-4f38-81b7-f0bdfc0d6b4e

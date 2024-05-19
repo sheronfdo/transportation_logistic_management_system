@@ -10,4 +10,6 @@ import jakarta.ejb.Remote;
 public interface InventoryService {
     AddNewItemResponse addNewItem(AddNewItemRequest addNewItemRequest);
     GetItemsResponse getItems(GetItemsRequest getItemsRequest);
+    GetItemsResponse getSingleItem(GetItemsRequest getItemsRequest);
+
 }
