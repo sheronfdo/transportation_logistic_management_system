@@ -1,12 +1,17 @@
 package com.jamith.tlms.serviceImpl;
 
 import com.jamith.tlms.dto.request.orderService.AddOrderRequest;
+import com.jamith.tlms.dto.request.orderService.CompleteOrderRequest;
 import com.jamith.tlms.dto.response.inventoryService.InventoryItem;
 import com.jamith.tlms.dto.response.orderService.AddOrderResponse;
+import com.jamith.tlms.dto.response.orderService.CompleteOrderResponse;
 import com.jamith.tlms.entity.Inventory;
 import com.jamith.tlms.entity.Order;
 import com.jamith.tlms.entity.OrderItem;
+import com.jamith.tlms.exceptions.ItemNotFoundException;
+import com.jamith.tlms.exceptions.OutOfStockException;
 import com.jamith.tlms.remote.OrderService;
+import com.jamith.tlms.util.enums.ShipmentStatus;
 import com.jamith.tlms.util.enums.Status;
 import jakarta.ejb.Stateless;
 import jakarta.ejb.TransactionAttribute;
@@ -17,6 +22,7 @@ import org.modelmapper.ModelMapper;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Stateless
@@ -32,6 +38,14 @@ public class OrderServiceBean implements OrderService {
                 .setParameter("status", Status.active.name())
                 .setParameter("id", addOrderRequest.getInventoryItemId())
                 .getSingleResult();
+
+        if(Objects.isNull(item)){
+            throw new ItemNotFoundException("Item Not Found Under Id = "+addOrderRequest.getInventoryItemId());
+        }
+
+        if(item.getStockQty()==0 && item.getStockQty()< addOrderRequest.getItemQty()){
+            throw new OutOfStockException(item.getName()+" is out of stock");
+        }
 
         Order order = new Order();
         order.setAddress(addOrderRequest.getAddress());
@@ -60,5 +74,17 @@ public class OrderServiceBean implements OrderService {
         addOrderResponse.setOrderId(order.getId());
         addOrderResponse.setTotalAmount(order.getTotalAmount());
         return addOrderResponse;
+    }
+
+
+    @Override
+    @TransactionAttribute(TransactionAttributeType.REQUIRED)
+    public CompleteOrderResponse completeOrder(CompleteOrderRequest completeOrderRequest) {
+        Order order = em.find(Order.class, completeOrderRequest.getOrderId());
+        order.setStatus(ShipmentStatus.delivered.name());
+        em.persist(order);
+        CompleteOrderResponse completeOrderResponse = new CompleteOrderResponse();
+        completeOrderResponse.setDescription("Order Completed");
+        return completeOrderResponse;
     }
 }

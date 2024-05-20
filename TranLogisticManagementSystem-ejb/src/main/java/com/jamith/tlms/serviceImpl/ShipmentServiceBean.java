@@ -1,15 +1,14 @@
 package com.jamith.tlms.serviceImpl;
 
 import com.jamith.tlms.dto.request.shipmentService.GetShipmentRequest;
+import com.jamith.tlms.dto.request.shipmentService.RouteOptimizeRequest;
 import com.jamith.tlms.dto.request.shipmentService.ShipmentStartRequest;
-import com.jamith.tlms.dto.response.shipmentService.GetShipmentResponse;
-import com.jamith.tlms.dto.response.shipmentService.ShipmentData;
-import com.jamith.tlms.dto.response.shipmentService.ShipmentOrderData;
-import com.jamith.tlms.dto.response.shipmentService.ShipmentStartResponse;
+import com.jamith.tlms.dto.response.shipmentService.*;
 import com.jamith.tlms.entity.Inventory;
 import com.jamith.tlms.entity.Order;
 import com.jamith.tlms.entity.Shipment;
 import com.jamith.tlms.entity.ShipmentOrder;
+import com.jamith.tlms.interceptor.RouteOptimizationInterceptor;
 import com.jamith.tlms.remote.ShipmentService;
 import com.jamith.tlms.util.enums.ShipmentStatus;
 import com.jamith.tlms.util.enums.Status;
@@ -17,6 +16,7 @@ import jakarta.ejb.Schedule;
 import jakarta.ejb.Stateless;
 import jakarta.ejb.TransactionAttribute;
 import jakarta.ejb.TransactionAttributeType;
+import jakarta.interceptor.Interceptors;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.modelmapper.ModelMapper;
@@ -98,5 +98,11 @@ public class ShipmentServiceBean implements ShipmentService {
         shipmentStartResponse.setDescription("Shipment started");
         shipmentStartResponse.setShipmentOrderDataList(shipments);
         return shipmentStartResponse;
+    }
+
+    @Interceptors(RouteOptimizationInterceptor.class)
+    public RouteOptimizeResponse getOrdersWithOptimizedRoute(RouteOptimizeRequest request) {
+        // This method will be intercepted, and the route optimization logic will be applied
+        return null;
     }
 }

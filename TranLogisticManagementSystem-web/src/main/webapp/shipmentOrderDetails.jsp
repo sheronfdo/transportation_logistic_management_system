@@ -22,7 +22,6 @@
         <th>ID</th>
         <th>Order</th>
         <th>Delivery Status</th>
-        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -31,12 +30,10 @@
             <td>${list.id}</td>
             <td>${list.order}</td>
             <td>${list.deliveryStatus}</td>
-            <td>
-                <a href="shipmentStart?shipmentId=${list.id}" onclick="return confirm('Are you sure?')">Start Shipment</a>
-            </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+<a href="route?shipmentId=${shipmentStartResponse.shipmentId}&lat=6.500&lon=6.500">Get Route Optimize Deliver Order List</a>
 </body>
 </html>
