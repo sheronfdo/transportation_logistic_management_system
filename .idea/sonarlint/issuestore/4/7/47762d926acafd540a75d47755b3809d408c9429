@@ -1,0 +1,10 @@
+
+¥
+java:S1488\"]Immediately return this expression instead of assigning it to the temporary variable "order".(ÿä‹Šùÿÿÿÿ8À©ª®ù1J$12fa3067-7b16-4b53-b40f-c1c28e1c7caf
+®
+java:S1488W"fImmediately return this expression instead of assigning it to the temporary variable "shipmentOrders".(´‘õ¨şÿÿÿÿ8À©ª®ù1J$544a01a1-8a5a-4384-b86b-f30d1ab3a324
+
+java:S2259F"JA "NullPointerException" could be thrown; "nearestOrder" is nullable here.(´õÏ©8™°°ù1J$0848a92d-08ca-4fcb-a81e-62740f9bbffa
+m	java:S106O"+Replace this use of System.out by a logger.(•€Ö³8ûŒ´®ù1J$f404ca04-6da2-4baf-aab2-a3ae8cec7342
+
+java:S1128"<Remove this unused import 'jakarta.interceptor.Interceptor'.(œ€æ 8Ç°°ù1J$d98d50fe-53ae-4689-ad71-174a74009261

@@ -6,12 +6,10 @@
         <artifactId>TranLogisticManagementSystem</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>TranLogisticManagementSystem-ear</artifactId>
-    <name>TranLogisticManagementSystem-ear</name>
-    <version>1.0</version>
-    <packaging>war</packaging>
+    <artifactId>TranLogisticManagementSystem-Shipment</artifactId>
+    <packaging>ejb</packaging>
+    <name>TranLogisticManagementSystem-Shipment</name>
     <url>http://maven.apache.org</url>
-
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -20,39 +18,64 @@
         <jakartaee>9.1.0</jakartaee>
     </properties>
     <dependencies>
-
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>9.1.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.jamith</groupId>
             <artifactId>TranLogisticManagementSystem-core</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>org.jamith</groupId>
-            <artifactId>TranLogisticManagementSystem-Inventory</artifactId>
-            <version>1.0</version>
-            <type>ejb</type>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.6.15.Final</version>
         </dependency>
         <dependency>
-            <groupId>org.jamith</groupId>
-            <artifactId>TranLogisticManagementSystem-Order</artifactId>
-            <version>1.0</version>
-            <type>ejb</type>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
         </dependency>
         <dependency>
-            <groupId>org.jamith</groupId>
-            <artifactId>TranLogisticManagementSystem-Shipment</artifactId>
-            <version>1.0</version>
-            <type>ejb</type>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.jamith</groupId>
-            <artifactId>TranLogisticManagementSystem-web</artifactId>
-            <version>1.0</version>
-            <type>war</type>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
-        <finalName>TranLogisticManagementSystem</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -66,8 +89,11 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <generateClient>true</generateClient>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -94,25 +120,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ear-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <defaultLibBundleDir>lib</defaultLibBundleDir>
-                    <modules>
-                        <ejbModule>
-                            <groupId>org.jamith</groupId>
-                            <artifactId>TranLogisticManagementSystem-ejb</artifactId>
-                            <bundleFileName>ejb.jar</bundleFileName>
-                        </ejbModule>
-                        <webModule>
-                            <groupId>com.jamith</groupId>
-                            <artifactId>TranLogisticManagementSystem-web</artifactId>
-                        </webModule>
-                    </modules>
-                </configuration>
-            </plugin>
         </plugins>
+        <finalName>TranLogisticManagementSystem-Shipment</finalName>
     </build>
 </project>

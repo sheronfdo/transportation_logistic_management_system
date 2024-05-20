@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="tranLogisticSys" transaction-type="JTA">
+        <jta-data-source>jdbc/tranLogisticSystem</jta-data-source>
+        <class>com.jamith.tlms.entity.Inventory</class>
+        <class>com.jamith.tlms.entity.Order</class>
+        <class>com.jamith.tlms.entity.OrderItem</class>
+        <class>com.jamith.tlms.entity.Shipment</class>
+        <class>com.jamith.tlms.entity.ShipmentOrder</class>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+        </properties>
+        <shared-cache-mode>NONE</shared-cache-mode>
+    </persistence-unit>
+</persistence>

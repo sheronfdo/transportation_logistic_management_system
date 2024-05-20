@@ -8,6 +8,7 @@
     </parent>
     <artifactId>TranLogisticManagementSystem-core</artifactId>
     <name>TranLogisticManagementSystem-core</name>
+    <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

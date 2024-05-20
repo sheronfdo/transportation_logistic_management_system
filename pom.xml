@@ -6,9 +6,11 @@
   <packaging>pom</packaging>
   <modules>
     <module>TranLogisticManagementSystem-web</module>
-    <module>TranLogisticManagementSystem-ejb</module>
+    <module>TranLogisticManagementSystem-Inventory</module>
     <module>TranLogisticManagementSystem-ear</module>
     <module>TranLogisticManagementSystem-core</module>
+    <module>TranLogisticManagementSystem-Shipment</module>
+    <module>TranLogisticManagementSystem-Order</module>
   </modules>
   <version>1.0</version>
   <name>TranLogisticManagementSystem</name>

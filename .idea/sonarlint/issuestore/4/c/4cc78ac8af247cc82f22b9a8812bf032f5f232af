@@ -1,0 +1,12 @@
+
+ˆ
+java:S1192'"GDefine a constant instead of duplicating this literal "status" 3 times.(Ò†ÓØùÿÿÿÿJ$908fd3f4-7283-43d5-9bfe-fff06b40f97d
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ıJ$d065249f-9478-449f-85ed-dbce9edcc509
+`
+java:S1155)">Use isEmpty() to check whether the collection is empty or not.(ö”•ùÿÿÿÿ8ó±“·ù1
+{
+java:S1854K"?Remove this useless assignment to local variable "modelMapper".(Éè±J$e8311fcc-3d2b-4209-8c03-3c062a65e8e3
+M
+java:S1481K"0Remove this unused "modelMapper" local variable.(Éè±8œ²“·ù1
+_
+java:S1128"=Remove this unused import 'com.jamith.tlms.entity.Inventory'.(ñŞÕúÿÿÿÿ8‰³“·ù1

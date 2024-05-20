@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ejb-jar>
+    <!--    <assembly-descriptor>-->
+    <!--        <interceptor-binding>-->
+    <!--            <ejb-name>*</ejb-name>-->
+    <!--            <interceptor-class>com.jiat.ejb.interceptor.AuthInterceptor</interceptor-class>-->
+    <!--        </interceptor-binding>-->
+    <!--    </assembly-descriptor>-->
+</ejb-jar>

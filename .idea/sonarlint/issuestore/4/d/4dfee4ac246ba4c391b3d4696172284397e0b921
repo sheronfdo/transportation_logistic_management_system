@@ -1,0 +1,12 @@
+
+t
+java:S1948"1Make "shipmentService" transient or serializable.(üÄ×¶8ãšÃ¯ù1J$34689e24-3faf-448e-8844-d102f386b02f
+¡
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(úÀ‹Õøÿÿÿÿ8åšÃ¯ù1J$aa64ae7c-eaec-458f-897b-5da9010ecb76
+Ÿ
+java:S1989"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(ã¨‹ô8åšÃ¯ù1J$35b75895-4635-4657-a85f-be75b5f23f84
+¤
+java:S1989"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(‰î°©ÿÿÿÿÿ8æšÃ¯ù1J$032a5073-7b02-4bc8-952b-fb017515b7d4
+r	java:S106""+Replace this use of System.out by a logger.(ÚÁÚÈÿÿÿÿÿ8çšÃ¯ù1J$afb88d4e-0815-43e6-aad0-185b4b3cbdeb
+¤
+java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8õ¯ù1J$02d5b682-ee72-46f2-91af-650f301601e2
