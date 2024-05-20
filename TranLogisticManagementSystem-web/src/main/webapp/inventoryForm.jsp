@@ -11,7 +11,7 @@
     <title>Inventory Form</title>
 </head>
 <body>
-<form action="inventory/new" method="post">
+<form action="inventory" method="post">
     <table>
         <tr>
             <th>Name</th>

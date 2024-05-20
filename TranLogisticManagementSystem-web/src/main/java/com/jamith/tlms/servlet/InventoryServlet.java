@@ -22,40 +22,12 @@ public class InventoryServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        doGet(req, resp);
+        addNewItem(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String action = req.getServletPath();
-        System.out.println(action);
-
-        try {
-            switch (action) {
-                case "/inventory/new":
-                    addNewItem(req, resp);
-                    break;
-//                case "/insert":
-//                    insertUser(req, resp);
-//                    break;
-//                case "/delete":
-//                    deleteUser(req, resp);
-//                    break;
-//                case "/edit":
-//                    showEditForm(req, resp);
-//                    break;
-//                case "/update":
-//                    updateUser(req, resp);
-//                    break;
-                default:
-                    listItem(req, resp);
-                    break;
-            }
-        } catch (Exception ex) {
-            throw new ServletException(ex);
-        }
+        listItem(req, resp);
     }
 
     void addNewItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
